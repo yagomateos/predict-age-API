@@ -1,8 +1,6 @@
 
 # Age Prediction App
 
-A brief description of what this project does and who it's for
-
 This is a simple Age Prediction app built using React and Axios. Given a name, it predicts the age based on the name.
 ## Installation
 
