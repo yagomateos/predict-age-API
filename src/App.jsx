@@ -30,7 +30,11 @@ function App() {
       /><br></br><br></br>
       {/* Add a button that triggers the "fetchData" function when clicked */}
       <button onClick={fetchData}>Predict Age</button>
-      {/* Display the "name", "age", and "count" properties of the "predictedAge" object */}
+      {/* Display the "name", "age", and "count" properties of the "predictedAge" object */
+      }
+
+
+
       <h1>Name: {predictedAge?.name}</h1>
       <h1>Predicted Age: {predictedAge?.age}</h1>
       <h1>Count: {predictedAge?.count}</h1>
@@ -38,5 +42,17 @@ function App() {
   )
 }
 
-// Export the "App" component as the default export of this module
 export default App
+
+{/* NOTES:
+
+The ? is called the optional chaining operator and is used to handle null or undefined values in a safe way.
+
+In this code, predictedAge is initially set to null in the state, so when the component first renders, the values for predictedAge.name, predictedAge.age, and predictedAge.count will be undefined.
+
+The ? operator is used to avoid errors caused by trying to access properties of an undefined value. It essentially checks if the value before the ? is truthy (not null or undefined) before trying to access the property after the ?.
+
+For example, {predictedAge?.name} is equivalent to writing predictedAge && predictedAge.name, but with less boilerplate code.
+
+This makes the code safer and less prone to errors if the API doesn't return the expected data structure, or if the state hasn't been updated yet.*/
+}
